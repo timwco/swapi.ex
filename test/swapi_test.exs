@@ -1,8 +1,8 @@
 defmodule SwapiTest do
-  use ExUnit.Case
-  doctest Swapi
-
-  test "the truth" do
-    assert 1 + 1 == 2
+  use ExUnit.Case, async: true
+  
+  test "person with id returns the correct person" do
+    assert {:ok, _} = Swapi.people(1)
   end
+
 end

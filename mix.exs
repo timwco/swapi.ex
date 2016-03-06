@@ -7,6 +7,7 @@ defmodule Swapi.Mixfile do
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: "An Elixir wrapper for the Star Wars API.",
      deps: deps]
   end
 
@@ -14,7 +15,7 @@ defmodule Swapi.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:httpoison]]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +28,8 @@ defmodule Swapi.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:httpoison, "~> 0.8.0"}
+    ]
   end
 end
