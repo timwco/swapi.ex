@@ -1,0 +1,2 @@
+defmodule Swapi do
+end
