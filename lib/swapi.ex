@@ -2,52 +2,58 @@ defmodule Swapi do
   # @moduledoc "Simple wrapper for the Star Wars API"
   alias HTTPoison.Response
 
-  # @doc "Gets the root url with a list of available resources"
+  @doc "Gets the root url with a list of available resources"
   def root do
     nil
     |> build_url
     |> get_data
   end
 
-  # @doc "Gets an individual or list of people from the Star Wars Universe"
+  @doc "Gets an individual or list of people from the Star Wars Universe"
   def people(id \\ nil) do
     if id do {"people", id} else "people" end
     |> build_url
     |> get_data
   end
 
-  # @doc "Gets an individual or list of films from the Star Wars Universe"
+  @doc "Gets an individual or list of films from the Star Wars Universe"
   def films(id \\ nil) do
     if id do {"films", id} else "films" end
     |> build_url
     |> get_data
   end
 
-  # @doc "Gets an individual or list of vehicles from the Star Wars Universe"
+  @doc "Gets an individual or list of vehicles from the Star Wars Universe"
   def vehicles(id \\ nil) do
     if id do {"vehicles", id} else "vehicles" end
     |> build_url
     |> get_data
   end
 
-  # @doc "Gets an individual or list of starships from the Star Wars Universe"
+  @doc "Gets an individual or list of starships from the Star Wars Universe"
   def starships(id \\ nil) do
     if id do {"starships", id} else "starships" end
     |> build_url
     |> get_data
   end
 
-  # @doc "Gets an individual or list of planets from the Star Wars Universe"
+  @doc "Gets an individual or list of planets from the Star Wars Universe"
   def planets(id \\ nil) do
     if id do {"planets", id} else "planets" end
     |> build_url
     |> get_data
   end
 
-  # @doc "Gets an individual or list of species from the Star Wars Universe"
+  @doc "Gets an individual or list of species from the Star Wars Universe"
   def species(id \\ nil) do
     if id do {"species", id} else "species" end
     |> build_url
+    |> get_data
+  end
+
+  @doc "Gets the schema for any specific resource"
+  def schema(resource) do
+    "http://swapi.co/api/#{resource}/schema"
     |> get_data
   end
 

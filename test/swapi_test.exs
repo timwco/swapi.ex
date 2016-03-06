@@ -60,4 +60,13 @@ defmodule SwapiTest do
     assert {:ok, _} = Swapi.planets(1)
   end
 
+  # Schema Tests
+  test "starships schema returns successful response" do
+    assert {:ok, _} = Swapi.schema("starships")
+  end
+
+  test "people schema returns successful response" do
+    assert {:ok, _} = Swapi.schema("people")
+  end
+
 end
