@@ -13,7 +13,7 @@ The [Hex package](https://hex.pm/packages/swapi) can be installed as:
   1. Add `swapi` to your list of dependencies in `mix.exs`:
 
         def deps do
-          [{:swapi, "~> 0.0.1"}]
+          [{:swapi, "~> 1.0.0"}]
         end
 
   2. Ensure `swapi` is started before your application:
@@ -24,6 +24,15 @@ The [Hex package](https://hex.pm/packages/swapi) can be installed as:
 
 ## Usage
 
+For each below (except `root`) you can use any of the following:
+
+- `people`
+- `films`
+- `starships`
+- `vehicles`
+- `species`
+- `planets`
+
 #### Root
 
 ```elixir
@@ -32,82 +41,26 @@ iex> Swapi.root
 {:ok, {...}}
 ```
 
-#### People
+#### Single
 
 ```elixir
 # Get all people
-iex> Swapi.people
-{:ok, {...}}
-
-# Get single person
-iex> Swapi.people(1)
+iex> Swapi.single("people", 1)
 {:ok, {...}}
 ```
 
-#### Films
+#### All
 
 ```elixir
-# Get all films
-iex> Swapi.films
-{:ok, {...}}
-
-# Get single film
-iex> Swapi.films(1)
-{:ok, {...}}
-```
-
-#### Starships
-
-```elixir
-# Get all starships
-iex> Swapi.starships
-{:ok, {...}}
-
-# Get single starship
-iex> Swapi.starships(1)
-{:ok, {...}}
-```
-
-#### Vehicles
-
-```elixir
-# Get all vehicles
-iex> Swapi.vehicles
-{:ok, {...}}
-
-# Get single vehicle
-iex> Swapi.vehicles(1)
-{:ok, {...}}
-```
-
-#### Species
-
-```elixir
-# Get all species
-iex> Swapi.species
-{:ok, {...}}
-
-# Get single species
-iex> Swapi.species(1)
-{:ok, {...}}
-```
-
-#### Planets
-
-```elixir
-# Get all planets
-iex> Swapi.planets
-{:ok, {...}}
-
-# Get single planet
-iex> Swapi.planets(1)
+# Get all people
+iex> Swapi.all("people")
 {:ok, {...}}
 ```
 
 #### Schema
 
 ```elixir
-# Get the schema for people (all other resources work as well)
+# Get the schema for people
 iex> Swapi.schema("people")
 {:ok, {...}}
 ```

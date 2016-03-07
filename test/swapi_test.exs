@@ -2,63 +2,28 @@ defmodule SwapiTest do
   use ExUnit.Case, async: true
 
   # Root Endpoint Test
-  test "root returns a succesffull response" do
+  test "root returns a successful response" do
     assert {:ok, _} = Swapi.root
   end
 
-  # People Endpoint Tests
-  test "person without id returns successful response" do
-    assert {:ok, _} = Swapi.people
+  # Single Resource Tests
+  test "single people endpoint returns a successful response" do
+    assert {:ok, _} = Swapi.single("people", 1)
   end
 
-  test "person with id returns a succesfull response" do
-    assert {:ok, _} = Swapi.people(1)
+  test "single film endpoint returns successful response" do
+    assert {:ok, _} = Swapi.single("films", 1)
   end
 
-  # Film Endpoing Tests
-  test "film without id returns a succesfull response" do
-    assert {:ok, _} = Swapi.films
+  # All Resource Tests
+  test "all people returns a successful response" do
+    assert {:ok, _} = Swapi.all("people")
   end
 
-  test "film with id returns a succesfull response" do
-    assert {:ok, _} = Swapi.films(1)
+  test "all film returns a successful response" do
+    assert {:ok, _} = Swapi.all("films")
   end
 
-  # Vehicle Endpoint Tests
-  test "vehicle without id returns a succesfull response" do
-    assert {:ok, _} = Swapi.vehicles
-  end
-
-  test "vehicle with id returns a succesfull response" do
-    assert {:ok, _} = Swapi.vehicles(4)
-  end
-
-  # Starship Endpoint Tests
-  test "starship without id returns a succesfull response" do
-    assert {:ok, _} = Swapi.starships
-  end
-
-  test "starship with id returns a succesfull response" do
-    assert {:ok, _} = Swapi.starships(9)
-  end
-
-  # Species Endpoint Tests
-  test "species without id returns a succesfull response" do
-    assert {:ok, _} = Swapi.species
-  end
-
-  test "species with id returns a succesfull response" do
-    assert {:ok, _} = Swapi.species(1)
-  end
-
-  # Plant Endpoint Tests
-  test "planet without id returns a succesfull response" do
-    assert {:ok, _} = Swapi.planets
-  end
-
-  test "planet with id returns a succesfull response" do
-    assert {:ok, _} = Swapi.planets(1)
-  end
 
   # Schema Tests
   test "starships schema returns successful response" do
