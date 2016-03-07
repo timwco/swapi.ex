@@ -32,4 +32,13 @@ defmodule Swapi.Mixfile do
       {:httpoison, "~> 0.8.0"}
     ]
   end
+
+  defp package do
+    [files: ["lib", "config", "mix.exs", "README*"],
+     maintainers: ["Tim Whitacre"],
+     licenses: ["MIT"],
+     links: %{"GitHub" => "https://github.com/twhitacre/swapi.ex",
+              "Docs"   => "https://hexdocs.pm/swapi/readme.html"}]
+  end
+
 end
