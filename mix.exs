@@ -8,6 +8,7 @@ defmodule Swapi.Mixfile do
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      description: "An Elixir wrapper for the Star Wars API.",
+     package: package,
      deps: deps]
   end
 
