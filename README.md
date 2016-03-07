@@ -1,6 +1,8 @@
 # Elixir Based Star Wars API Wrapper
 
 [![Build Status](https://travis-ci.org/twhitacre/swapi.ex.svg?branch=master)](https://travis-ci.org/twhitacre/swapi.ex)
+[![Hex.pm](https://img.shields.io/hexpm/l/swapi.svg)](https://hex.pm/packages/swapi)
+[![Hex.pm](https://img.shields.io/hexpm/v/swapi.svg)](https://hex.pm/packages/swapi)
 
 A simple wrapper for the [Star Wars API](http://swapi.co) - [Swapi Documentation](https://swapi.co/documentation)
 

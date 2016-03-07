@@ -9,6 +9,7 @@ defmodule Swapi.Mixfile do
      start_permanent: Mix.env == :prod,
      description: "An Elixir wrapper for the Star Wars API.",
      package: package,
+     docs: [extras: ["README.md"]],
      deps: deps]
   end
 
@@ -40,7 +41,8 @@ defmodule Swapi.Mixfile do
     [files: ["lib", "config", "mix.exs", "README*"],
      maintainers: ["Tim Whitacre"],
      licenses: ["MIT"],
-     links: %{"GitHub" => "https://github.com/twhitacre/swapi.ex"}]
+     links: %{"GitHub" => "https://github.com/twhitacre/swapi.ex",
+              "Docs"   => "https://hexdocs.pm/swapi/readme.html"}]
   end
 
 end
