@@ -30,7 +30,9 @@ defmodule Swapi.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:httpoison, "~> 0.8.0"}
+      {:httpoison, "~> 0.8.0"},
+      {:earmark, "~> 0.1", only: :dev},
+      {:ex_doc, "~> 0.11", only: :dev}
     ]
   end
 
@@ -38,8 +40,7 @@ defmodule Swapi.Mixfile do
     [files: ["lib", "config", "mix.exs", "README*"],
      maintainers: ["Tim Whitacre"],
      licenses: ["MIT"],
-     links: %{"GitHub" => "https://github.com/twhitacre/swapi.ex",
-              "Docs"   => "https://hexdocs.pm/swapi/readme.html"}]
+     links: %{"GitHub" => "https://github.com/twhitacre/swapi.ex"}]
   end
 
 end

@@ -6,15 +6,15 @@ A simple wrapper for the [Star Wars API](http://swapi.co) - [Swapi Documentation
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+The [Hex package](https://hex.pm/packages/swapi) can be installed as:
 
-  1. Add swapi to your list of dependencies in `mix.exs`:
+  1. Add `swapi` to your list of dependencies in `mix.exs`:
 
         def deps do
           [{:swapi, "~> 0.0.1"}]
         end
 
-  2. Ensure swapi is started before your application:
+  2. Ensure `swapi` is started before your application:
 
         def application do
           [applications: [:swapi]]
